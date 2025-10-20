@@ -6,9 +6,9 @@ A simple Docker container that bundles TFTP-hpa and NGINX, for best results, use
 
 ## Motivation
 
-This setup is designed for one reason: to make iPXE booting easy.
+This setup is designed for one reason: to make iPXE booting and customization easy.
 
-iPXE first grabs its bootloader via TFTP, then immediately looks for `autoexec.ipxe` via HTTP from the exact same IP address. Putting TFTP and Nginx in separate containers breaks this workflow, and I run these services on a MikroTik router in my homelab (to have PXE-based provisioning), where each container gets a different IP address.
+iPXE first grabs its bootloader via TFTP, then immediately looks for `autoexec.ipxe` via HTTP from the exact same IP address. Putting TFTP and Nginx in separate containers breaks this workflow, as I run these services on a MikroTik router in my homelab (to have PXE-based provisioning), where each container gets a different IP address.
 
 ---
 
